@@ -318,7 +318,7 @@ FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
 -include vendor/extra/BoardConfigExtra.mk
 ifneq ($(ORGASMIC_BUILD),)
-include vendor/orgasmic/config/BoardConfigOrgasmic.mk
+include vendor/proton/config/BoardConfigOrgasmic.mk
 endif
 
 # The build system exposes several variables for where to find the kernel
@@ -1160,10 +1160,10 @@ dont_bother_goals := out \
     product-graph dump-products
 
 ifneq ($(ORGASMIC_BUILD),)
-ifneq ($(wildcard device/orgasmic/sepolicy/common/sepolicy.mk),)
+ifneq ($(wildcard device/proton/sepolicy/common/sepolicy.mk),)
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
-$(eval include device/orgasmic/sepolicy/common/sepolicy.mk)
+$(eval include device/proton/sepolicy/common/sepolicy.mk)
 endif
 endif
 
