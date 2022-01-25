@@ -222,7 +222,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   script.AppendExtra("ifelse(is_mounted(\"/system\"), unmount(\"/system\"));")
 
-  is_gapps = target_info.GetBuildProp("ro.orgasmic.version").endswith("-gapps")
+  is_gapps = target_info.GetBuildProp("ro.orgasmic.version").endswith("-elgoog")
   androidver = target_info.GetBuildProp("ro.build.version.release")
   orgasmicver = target_info.GetBuildProp("ro.orgasmic.build.version")
   build_id = target_info.GetBuildProp("ro.build.id")
@@ -232,6 +232,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   script.Print("--------------------------------------------")
   script.Print("             Orgasmic Project               ")
+  script.Print("          Please don't get a boner          ")
   script.Print("--------------------------------------------")
   script.Print("Android Version: %s"%(androidver))
   script.Print("Orgasmic Version: %s"%(orgasmicver))
